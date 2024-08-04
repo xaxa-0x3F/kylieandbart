@@ -13,7 +13,8 @@ body {
   font-family: "Open Sans", sans-serif;
   color: black;
   /* background-color: radial-gradient(pink, purple, white); */
-  background: repeating-radial-gradient(white, pink);
+  background: black;
+  overflow-x: hidden;
 }
 
 a {
@@ -45,7 +46,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #ff1493;
+  background: black;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -83,6 +84,7 @@ h6 {
   padding: 0 15px;
   background: rgba(0,0,0,0.45);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #header .profile img {
@@ -124,7 +126,7 @@ h6 {
 }
 
 #header .profile .social-links a:hover {
-  background: #ff1493;
+  background: black;
   color: #fff;
   text-decoration: none;
 }
@@ -217,7 +219,7 @@ h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #ff1493;
+  background-color: black;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -243,9 +245,9 @@ h6 {
 #hero {
   width: 100%;
   /*transition: background 300ms ease-in 200ms;*/
-  transition: background 200ms ease-in-out 100ms;
+  /* transition: background 200ms ease-in-out 100ms; */
   height: 100vh;
-  background: url("../img/k1.jpg") center;
+  background: url("../img/fu.png") center;
   background-size: cover;
 }
 
@@ -285,7 +287,7 @@ h6 {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #ff1493;
+  border-bottom: 3px solid #ff0000;
 }
 
 @media (min-width: 1024px) {
@@ -316,7 +318,7 @@ section {
 }
 
 .section-bg {
-  background: repeating-radial-gradient(white, pink);
+  background: white;
 }
 
 .section-title {
