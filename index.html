@@ -13,7 +13,7 @@
       <link href="assets/img/heart.png" rel="icon">
       <link href="assets/img/heart.png" rel="apple-touch-icon">
       <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
       <!-- Vendor CSS Files -->
       <link href="assets/vendor/aos/aos.css" rel="stylesheet">
       <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -41,6 +41,56 @@
          content: "";
          display: table;
          clear: both;
+         }
+         /* Hero section responsive adjustments */
+         #hero {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+         }
+         #hero .hero-container {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 90%; /* Ensure the container is not wider than the viewport */
+         }
+         #hero .counter-container {
+            width: 100%; /* Make counter container responsive */
+            height: auto;
+            position: relative;
+            padding-bottom: 0;
+            margin: 0 auto;
+            text-align: left;
+         }
+         #hero .counter-title {
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: red;
+         }
+         #hero .counter {
+            font-family: 'Raleway', sans-serif;
+            font-size: 24px; /* Adjust this to match the size of the .typed span */
+            color: white;
+         }
+         #hero .typed {
+            font-family: 'Raleway', sans-serif;
+            font-size: 24px; /* Ensure this matches the .counter font size */
+         }
+         @media (max-width: 768px) {
+            #hero .hero-container {
+               padding: 10px;
+               font-size: 16px;
+            }
+            #hero .counter-title {
+               font-size: 18px;
+            }
+            #hero .counter, #hero .typed {
+               font-size: 20px;
+            }
          }
       </style>
       <!-- =======================================================
@@ -81,11 +131,8 @@
                document.getElementById("hero").style.backgroundSize = "cover";
             }
 
-            
             changeBackground();
-
             setTimeout(stopBackgroundChange, displayDuration);
-
          </script>
          <div class="hero-container" data-aos="fade-in">
              <h1>Kylie,</h1>
@@ -119,37 +166,6 @@
      
          <!-- Link to Raleway font -->
          <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-     
-         <style>
-             #hero .hero-container {
-                 background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
-                 padding: 20px;
-                 border-radius: 10px;
-             }
-             #hero .counter-container {
-                 width: 600px;
-                 height: auto;
-                 position: relative;
-                 padding-bottom: 0;
-                 margin: 0 auto;
-                 text-align: left;
-             }
-             #hero .counter-title {
-                 font-family: 'Raleway', sans-serif;
-                 font-size: 20px;
-                 margin-bottom: 10px;
-                 color: red;
-             }
-             #hero .counter {
-                 font-family: 'Raleway', sans-serif;
-                 font-size: 24px; /* Adjust this to match the size of the .typed span */
-                 color: white;
-             }
-             #hero .typed {
-                 font-family: 'Raleway', sans-serif;
-                 font-size: 24px; /* Ensure this matches the .counter font size */
-             }
-         </style>
      </section>
      <body style="overflow: hidden;">
       <video style="max-width: 100%;" class="middle" autoplay="" muted="" loop="">
@@ -158,9 +174,7 @@
          Your browser does not support the video tag.
       </video>
      </body>
-     
       <!--End Here-->
-      
       <!-- End #main -->
       <!-- Vendor JS Files -->
       <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
